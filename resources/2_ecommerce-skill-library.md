@@ -11,14 +11,16 @@
 | 分类 | Skill 数量 | 主要用户 |
 |------|-----------|---------|
 | [店铺开发 & 定制（国际平台）](#店铺开发--定制国际平台) | 29 个 | 开发者（前端）、开发者（后端） |
-| [店铺开发 & 定制（国内平台）](#店铺开发--定制国内平台) | 1 个 | 开发者（后端） |
-| [商品 & 运营管理](#商品--运营管理) | 18 个 | 商家、开发者（后端）、AI（商家侧） |
+| [店铺开发 & 定制（国内平台）](#店铺开发--定制国内平台) | 2 个 | 开发者（后端） |
+| [商品管理](#商品管理) | 14 个 | 商家、开发者（后端）、AI（商家侧） |
+| [运营管理 - 订单管理](#运营管理---订单管理) | 3 个 | 商家、AI（商家侧） |
+| [运营管理 - 客户运营](#运营管理---客户运营) | 4 个 | 商家、AI（商家侧） |
+| [运营管理 - 经营分析](#运营管理---经营分析) | 11 个 | 商家、AI（商家侧） |
 | [消费者购物自动化](#消费者购物自动化) | 1 个 | 消费者、AI（消费者侧） |
-| [支付 & 交易](#支付--交易) | 4 个 | 开发者（后端） |
+| [支付 & 交易](#支付--交易) | 6 个 | 开发者（后端） |
 | [搜索 & 内容管理](#搜索--内容管理) | 1 个 | 开发者（前端）、开发者（后端） |
 | [独立站部署 & 基础设施](#独立站部署--基础设施) | 3 个 | 开发者（后端） |
 | [开源电商框架](#开源电商框架) | 1 个 | 开发者（后端） |
-| [数据分析 & 财务诊断](#数据分析--财务诊断) | 4 个 | 商家、AI（商家侧） |
 | [营销 & CRO](#营销--cro) | 5 个 | 商家、AI（商家侧）、开发者（后端） |
 
 ---
@@ -82,6 +84,7 @@
 | `woocommerce-admin` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce 后台管理页面定制，添加设置页、自定义列及 Meta Box | WooCommerce 设置 Tab/Section 添加；产品列表页自定义列与批量操作；订单详情页 Meta Box；WooCommerce Admin React 组件扩展 | WooCommerce | 🔧 开发者（后端） |
 | `bigcommerce-app-dev` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/bigcommerce-commerce) | BigCommerce 单次点击 App 开发，覆盖 OAuth 安装、iFrame 渲染和 Webhook 订阅 | Single-Click App OAuth 安装流程；App Bridge iFrame 渲染；Webhook 订阅（订单/产品/客户事件）；Partner Portal 上架流程 | BigCommerce | 🔧 开发者（后端） |
 | `salesforce-sfra` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/salesforce-commerce) | Salesforce B2C Commerce SFRA 开发，通过 Cartridge 覆写机制扩展电商功能 | Cartridge 覆写机制与 Cartridge Path 配置；Controller 路由与 Route 扩展；ISML 模板语法；Page Designer 内容组件开发 | Salesforce Commerce Cloud | 🔧 开发者（后端） |
+| `amazon-seller-india`（SP-API） | [codeyogi911/amazon-seller-india](https://github.com/codeyogi911/amazon-seller-india) | 亚马逊印度市场卖家 SP-API 集成，通过 AI Agent Skill 直接查询订单、库存、财务数据 | SP-API 完整集成（订单/商品/库存/报告/财务）；自动 Restricted Data Token 生成；LWA OAuth 认证；FBA 库存状态查询；结算报告获取 | Amazon（印度） | 🔧 开发者（后端） |
 
 ---
 
@@ -97,9 +100,9 @@
 
 ---
 
-## 商品 & 运营管理
+## 商品管理
 
-> 直接操作电商核心数据（商品、订单、库存、客户）的 Skill。
+> 直接操作商品核心数据（商品信息描述优化、商品数据分析）的 Skill。
 
 | Skill 名称 | Repo | 描述 | 支持的能力 | 适用平台 | 面向用户 |
 |------------|------|------|-----------|----------|----------|
@@ -110,16 +113,58 @@
 | `magento-catalog` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/magento2-commerce) | Magento 2 商品目录管理，支持多种产品类型、分类树、价格规则和 MSI 库存 | 产品类型创建（Simple/Configurable/Bundle/Grouped/Virtual）；分类树管理（CategoryRepositoryInterface）；目录价格规则配置；MSI 多仓库存分配；价格索引重建 | Magento 2 | 🔧 开发者（后端） |
 | `woocommerce-catalog` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce 商品目录管理，通过代码创建产品、变体、属性和分类 | WC_Product_Simple/Variable 程序化创建；产品属性（Attribute）与变体（Variation）管理；产品分类（Term）与标签；价格字段与 Scheduled Sale | WooCommerce | 🔧 开发者（后端） |
 | `bigcommerce-catalog` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/bigcommerce-commerce) | BigCommerce 商品目录 API 操作，支持 REST 和 GraphQL 双模式及 B2B 分级定价 | REST Catalog API 产品 CRUD；产品变体/modifier/选项管理；Price Lists（B2B 分级定价）；品牌（Brand）与分类树管理 | BigCommerce | 🔧 开发者（后端） |
+| `merchandising` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/merchandising) | 商品运营 skill 系列（18 个），覆盖批量定价、库存盘点、SEO 优化、滞销分析等 | 按规则批量调价；库存盘点与异常标记；产品 SEO title 批量优化；死库存/滞销库存识别；Collection 产品排序规则；Metafield 批量写入；条件批量打标 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `amazon-listing-optimizer` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-listing-optimizer) | 从零创建或审计现有亚马逊 Listing，支持竞品 ASIN 分析和 8 维度评分 | 关键词优化 Title/Bullets/Description；竞品 ASIN 分析；Listing 质量 8 维度评分（相关性/完整性/可读性等）；符合 Amazon 字符限制和格式规范 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-keyword-research` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-keyword-research) | 亚马逊关键词研究，发现高流量低竞争词并生成关键词优先级矩阵 | 搜索量/竞争度/相关性分析；长尾词挖掘；跨 ASIN 关键词对比；关键词优先级矩阵输出 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-backend-keywords` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-backend-keywords) | 亚马逊后台搜索词优化，在 250 字节限制内最大化关键词覆盖 | 250 字节限制内关键词去重与优先级排序；避免重复已在 Title/Bullets 中出现的词；拼写变体与同义词填充；输出可直接粘贴的后台词串 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-a-plus-content` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-a-plus-content) | 亚马逊 A+ 内容规划，包括模块布局设计、说服性文案和对比图表 | A+ 模块布局方案（标准/高级）；产品对比图表规划；品牌故事叙述框架；图片 Brief 与文案；符合 Amazon A+ 审核规范 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-catalog-cli` | [BWB03/amazon-catalog-cli](https://github.com/BWB03/amazon-catalog-cli)（SkillCrate） | Agent 原生的亚马逊商品目录审计工具，12 项健康度检查 + RUFUS bullet 评分 | 12 项 Listing 健康度检查；RUFUS（Amazon AI 搜索）bullet 优化评分；JSON/NDJSON 结构化输出；字段掩码与分页；Schema 内省；MCP Server 模式 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `apify-ecommerce`（含亚马逊） | [apify/agent-skills](https://github.com/apify/agent-skills/blob/main/skills/apify-ecommerce/SKILL.md) | 跨平台电商数据采集，覆盖亚马逊商品/评论/价格，支持 30+ 电商平台 | 亚马逊商品详情/评论/搜索数据抓取；竞品价格监控（MAP 合规检查）；卖家发现（跨店铺授权卖家追踪）；CSV/JSON 输出；MCP Actor 调用 | Amazon、Walmart、eBay 等 30+ 平台 | 🏪 商家　🤖 AI（商家侧） |
+
+---
+
+## 运营管理 - 订单管理
+
+> 直接操作订单数据（履行、退货、订单分析）的 Skill。
+
+| Skill 名称 | Repo | 描述 | 支持的能力 | 适用平台 | 面向用户 |
+|------------|------|------|-----------|----------|----------|
 | `fulfillment-ops` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops) | 履行操作 skill 系列（5 个），覆盖日报、Hold、智能路由、追踪更新和 SLA 监控 | 履行状态日报生成（待处理/已发货/延迟）；订单 Hold/Release（orderHoldCreate/orderHoldRelease）；智能路由到最优库位；批量更新追踪号（fulfillmentTrackingInfoUpdateV2）；SLA 违约订单预警 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
-| `customer-support` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/customer-support) | 客服操作 skill 系列（5 个），覆盖订单查询、退款、退货申请、地址修改和 WISMO 自动回复 | 通过邮箱/订单号查询订单状态；全额/部分退款处理（refundCreate，dry_run 预览后执行）；退货申请发起（returnCreate）；发货前地址修改（orderUpdate）；WISMO 自动回复模板生成 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
 | `returns` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/returns) | 退货分析 skill 系列（3 个），覆盖退货原因分析、换货比率计算和 SLA 监控 | 退货原因分布分析（损坏/尺码/不符/改变主意）；换货 vs 退款比例报告；退款处理 SLA 违约标记 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
 | `order-intelligence` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/order-intelligence) | 订单智能分析 skill 系列（3 个），覆盖欺诈评分、高风险打标和复购识别 | Shopify Fraud Analysis API 欺诈评分；高风险订单自动打标（tagsAdd）；复购用户识别与购买间隔分析 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
-| `magento-checkout` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/magento2-commerce) | Magento 2 结账流程定制，包含步骤定制、地址字段扩展和订单事件监听 | Checkout 步骤添加/修改（checkout_index_index.xml）；地址表单字段自定义；订单属性扩展（Extension Attributes）；购物车价格规则；订单事件监听（checkout_submit_all_after） | Magento 2 | 🔧 开发者（后端） |
-| `woocommerce-checkout` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce 结账流程定制，支持 Blocks API 和 Classic Checkout 双模式 | WooCommerce Blocks API 自定义结账字段；Classic Checkout hooks（woocommerce_checkout_fields/process）；结账字段保存到 Order Meta；订单状态流转 | WooCommerce | 🔧 开发者（后端） |
-| `shopify-customer` | [Shopify/Shopify-AI-Toolkit](https://github.com/Shopify/Shopify-AI-Toolkit/tree/main/skills/shopify-customer)（官方） | Shopify Customer Account API 开发，支持客户自助服务功能和 B2B 公司账户数据访问 | Customer Account API OAuth PKCE 认证；客户订单历史查询（customer.orders）；地址管理（customerAddress* mutations）；客户账户偏好设置；B2B 公司账户数据访问 | Shopify | 🔧 开发者（后端） |
+
+---
+
+## 运营管理 - 客户运营
+
+> 直接操作客户数据（客户运营、客服、账户管理）的 Skill。
+
+| Skill 名称 | Repo | 描述 | 支持的能力 | 适用平台 | 面向用户 |
+|------------|------|------|-----------|----------|----------|
 | `customer-ops` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/customer-ops) | 客户运营 skill 系列（6 个），覆盖去重、分层打标、同期群分析、B2B 配置和 GDPR 处理 | 重复客户账户检测（按邮箱/电话）；按生命周期消费分层打标（Bronze/Silver/Gold/VIP）；客户同期群留存与 LTV 分析；B2B 公司账户与联系人配置；GDPR 删除请求处理（customerRequestDataErasure）；VIP 客户自动识别与打标 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
-| `woocommerce-data-stores` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce CRUD 数据层操作，通过官方 API 管理客户、订单、产品数据，兼容 HPOS | WC_Customer CRUD（注册/地址/元数据）；HPOS 高性能订单存储兼容；Customer Meta 自定义字段读写 | WooCommerce | 🔧 开发者（后端） |
-| `merchandising` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/merchandising) | 商品运营 skill 系列（18 个），覆盖批量定价、库存盘点、SEO 优化、滞销分析等 | 按规则批量调价；库存盘点与异常标记；产品 SEO title 批量优化；死库存/滞销库存识别；Collection 产品排序规则；Metafield 批量写入；条件批量打标 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `customer-support` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/customer-support) | 客服操作 skill 系列（5 个），覆盖订单查询、退款、退货申请、地址修改和 WISMO 自动回复 | 通过邮箱/订单号查询订单状态；全额/部分退款处理（refundCreate，dry_run 预览后执行）；退货申请发起（returnCreate）；发货前地址修改（orderUpdate）；WISMO 自动回复模板生成 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `shopify-customer` | [Shopify/Shopify-AI-Toolkit](https://github.com/Shopify/Shopify-AI-Toolkit/tree/main/skills/shopify-customer)（官方） | Shopify Customer Account API 开发，支持客户自助服务功能和 B2B 公司账户数据访问 | Customer Account API OAuth PKCE 认证；客户订单历史查询（customer.orders）；地址管理（customerAddress* mutations）；客户账户偏好设置；B2B 公司账户数据访问 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `woocommerce-data-stores` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce CRUD 数据层操作，通过官方 API 管理客户、订单、产品数据，兼容 HPOS | WC_Customer CRUD（注册/地址/元数据）；HPOS 高性能订单存储兼容；Customer Meta 自定义字段读写 | WooCommerce | 🏪 商家<br>🤖 AI（商家侧） |
+
+---
+
+## 运营管理 - 经营分析
+
+> 基于市场/销售数据等经营层面进行分析的 Skill，面向商家和运营人员。
+
+| Skill 名称 | Repo | 描述 | 支持的能力 | 适用平台 | 面向用户 |
+|------------|------|------|-----------|----------|----------|
+| `claude-ecom` | [takechanman1228/claude-ecom](https://github.com/VoltAgent/awesome-agent-skills)（经 awesome-agent-skills 收录） | 从订单 CSV 自动生成完整电商业务回顾，输出 KPI 分解树、诊断摘要和行动计划 | 从订单 CSV 提取核心 KPI（GMV/AOV/转化率/复购率）；KPI 分解树（收入 = 流量 × 转化 × AOV）；按优先级排列的诊断发现摘要；针对数据异常点的具体行动计划 | 通用（任意能导出 CSV 的平台） | 🏪 商家<br>🤖 AI（商家侧） |
+| `ecom-cfo-skill` | [jeffreydebolt/ecom-cfo-skill](https://github.com/jeffreydebolt/ecom-cfo-skill) | 适用于 $50万–$3000万规模电商的兼职 CFO 诊断框架，覆盖 Amazon、Shopify 和混合渠道卖家 | 瀑布诊断法（COGS→履行→毛利→广告→净利润逐层排查）；贡献利润阈值体系（15%/20%/25%）；TRIAGE.md 快速诊断卡；THRESHOLDS.md 行业基准参考；COMMON_FAILURES.md 常见问题模式；多客户只读财务 Copilot 架构 | Amazon、Shopify、混合渠道 | 🏪 商家<br>🤖 AI（商家侧） |
+| `finance` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/finance) | 财务报表 skill 系列（7 个），覆盖收入、退款率、AOV、税务、配送成本等维度 | 按渠道/产品/日期的收入拆分报告；退款率趋势与驱动因素分析；AOV 趋势追踪；多税区税务负债汇总；配送成本率分析；折扣码收入影响评估 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `conversion-optimization` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/conversion-optimization) | 转化优化分析 skill 系列（3 个），覆盖折扣 A/B 测试、弃购分析和礼品卡追踪 | 折扣金额/比例 A/B 测试报告；购物车与结账弃购率漏斗分析；礼品卡使用与剩余负债追踪 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
+| `amazon-fba-calculator` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-fba-calculator) | 完整的 FBA 费用分解与利润分析，覆盖所有费用项和盈亏平衡计算 | 推荐费（Referral Fee）计算；FBA 履行费（体积/重量）；月度存储费与长期存储费；损益平衡定价；净利润率与 ROI 计算 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-brand-analytics` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-brand-analytics) | 亚马逊品牌分析数据解读，理解搜索词报告、市场份额和客户行为 | 搜索词频率排名解读；点击/购买份额分析；品牌市场份额趋势；复购率与客户忠诚度指标 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-competitor-analysis` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-competitor-analysis) | 亚马逊竞品深度分析，识别竞争对手弱点和差异化机会 | 竞品 Listing 质量对比；差评痛点挖掘（用于差异化定位）；定价策略分析；Buy Box 占有率评估；产品差异化机会识别 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-buy-box` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-buy-box) | Buy Box 赢得策略分析，基于价格/库存/绩效指标给出优化建议 | Buy Box 赢得因素权重分析；竞争性定价策略；卖家绩效指标（ODR/LSR/CVFR）优化；FBA vs FBM Buy Box 对比；动态定价建议 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `keepa-adapter` | [BWB03/keepa-adapter](https://github.com/BWB03/keepa-adapter)（SkillCrate） | 通过 Keepa API 监控亚马逊产品价格历史、BSR 排名趋势和 Buy Box 变化 | 价格历史趋势（最长 3 年）；BSR 排名趋势与类目对比；Buy Box 变化记录；促销影响分析；跨 100+ ASIN 批量监控；SQLite 本地存储；每日定时采集 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-ppc-campaign` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-ppc-campaign) | 构建 PPC 广告活动结构或优化现有活动，包含 ACoS 目标设定和竞价策略 | SP/SB/SD 三类广告活动结构规划；ACoS 目标计算（基于利润率）；关键词分组与竞价策略；广告活动命名规范；预算分配建议 | Amazon | 🏪 商家　🤖 AI（商家侧） |
+| `amazon-advertising-strategy` | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills/tree/main/amazon-advertising-strategy) | 综合广告策略，覆盖 SP+SB+SD 全类型、预算分配和 ACoS 优化 | SP/SB/SD 全类型广告策略设计；品牌推广（SB）创意规划；再营销（SD）受众定向；预算跨活动分配；ACoS 长期优化路径 | Amazon | 🏪 商家　🤖 AI（商家侧） |
 
 ---
 
@@ -143,6 +188,8 @@
 | `payment-integration` | [mrgoonie/claudekit-skills](https://github.com/mrgoonie/claudekit-skills) | 多支付平台综合集成方案，覆盖 Stripe、Paddle、Polar 及越南本地支付 SePay | Stripe Checkout Session/Customer Portal/Webhook 验证；Paddle 订阅与 Merchant of Record；Polar 开源项目变现；SePay 越南 VietQR 集成；通用 Webhook 签名验证模式 | 通用（Shopify/SaaS） | 🔧 开发者（后端） |
 | `woocommerce-payments` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce 支付网关开发，实现自定义支付方式和信用卡 Token 化存储 | WC_Payment_Gateway 子类实现（process_payment/validate_fields）；信用卡 Token 化（WC_Payment_Token）；Webhook 处理（成功/失败/退款）；Stripe Elements/PayPal SDK 集成模式 | WooCommerce | 🔧 开发者（后端） |
 | `bigcommerce-payments` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/bigcommerce-commerce) | BigCommerce 支付集成，通过 Checkout SDK 定制结账流程和支付方式配置 | BigCommerce Checkout SDK 自定义；支付方式隐藏/排序（Payments API）；第三方支付服务商对接（Klarna/Afterpay 等 BNPL） | BigCommerce | 🔧 开发者（后端） |
+| `magento-checkout` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/magento2-commerce) | Magento 2 结账流程定制，包含步骤定制、地址字段扩展和订单事件监听 | Checkout 步骤添加/修改（checkout_index_index.xml）；地址表单字段自定义；订单属性扩展（Extension Attributes）；购物车价格规则；订单事件监听（checkout_submit_all_after） | Magento 2 | 🔧 开发者（后端） |
+| `woocommerce-checkout` | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce) | WooCommerce 结账流程定制，支持 Blocks API 和 Classic Checkout 双模式 | WooCommerce Blocks API 自定义结账字段；Classic Checkout hooks（woocommerce_checkout_fields/process）；结账字段保存到 Order Meta；订单状态流转 | WooCommerce | 🔧 开发者（后端） |
 
 ---
 
@@ -178,19 +225,6 @@
 
 ---
 
-## 数据分析 & 财务诊断
-
-> 从电商数据中提取洞察、诊断经营问题的 Skill，面向商家和运营人员。
-
-| Skill 名称 | Repo | 描述 | 支持的能力 | 适用平台 | 面向用户 |
-|------------|------|------|-----------|----------|----------|
-| `claude-ecom` | [takechanman1228/claude-ecom](https://github.com/VoltAgent/awesome-agent-skills)（经 awesome-agent-skills 收录） | 从订单 CSV 自动生成完整电商业务回顾，输出 KPI 分解树、诊断摘要和行动计划 | 从订单 CSV 提取核心 KPI（GMV/AOV/转化率/复购率）；KPI 分解树（收入 = 流量 × 转化 × AOV）；按优先级排列的诊断发现摘要；针对数据异常点的具体行动计划 | 通用（任意能导出 CSV 的平台） | 🏪 商家<br>🤖 AI（商家侧） |
-| `ecom-cfo-skill` | [jeffreydebolt/ecom-cfo-skill](https://github.com/jeffreydebolt/ecom-cfo-skill) | 适用于 $50万–$3000万规模电商的兼职 CFO 诊断框架，覆盖 Amazon、Shopify 和混合渠道卖家 | 瀑布诊断法（COGS→履行→毛利→广告→净利润逐层排查）；贡献利润阈值体系（15%/20%/25%）；TRIAGE.md 快速诊断卡；THRESHOLDS.md 行业基准参考；COMMON_FAILURES.md 常见问题模式；多客户只读财务 Copilot 架构 | Amazon、Shopify、混合渠道 | 🏪 商家<br>🤖 AI（商家侧） |
-| `finance` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/finance) | 财务报表 skill 系列（7 个），覆盖收入、退款率、AOV、税务、配送成本等维度 | 按渠道/产品/日期的收入拆分报告；退款率趋势与驱动因素分析；AOV 趋势追踪；多税区税务负债汇总；配送成本率分析；折扣码收入影响评估 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
-| `conversion-optimization` | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills/tree/main/skills/conversion-optimization) | 转化优化分析 skill 系列（3 个），覆盖折扣 A/B 测试、弃购分析和礼品卡追踪 | 折扣金额/比例 A/B 测试报告；购物车与结账弃购率漏斗分析；礼品卡使用与剩余负债追踪 | Shopify | 🏪 商家<br>🤖 AI（商家侧） |
-
----
-
 ## 营销 & CRO
 
 > 电商营销自动化、转化率优化、SEO 和邮件运营的 Skill。
@@ -220,6 +254,11 @@
 | [TeamDijon/shopify-rules](https://github.com/TeamDijon/shopify-rules) | 1 个 | — |
 | [mrgoonie/claudekit-skills](https://github.com/mrgoonie/claudekit-skills) | 1 个 | — |
 | [zironglv/taobao-native](https://github.com/zironglv/taobao-native) | 1 个 | — |
+| [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | 51 个 | MIT |
+| [BWB03/amazon-catalog-cli](https://github.com/BWB03/amazon-catalog-cli)（SkillCrate） | 1 个 | MIT |
+| [BWB03/keepa-adapter](https://github.com/BWB03/keepa-adapter)（SkillCrate） | 13 个工具 | MIT |
+| [codeyogi911/amazon-seller-india](https://github.com/codeyogi911/amazon-seller-india) | 1 个 | — |
+| [apify/agent-skills](https://github.com/apify/agent-skills) | 1 个（含 30+ 平台） | Apache 2.0 |
 
 ---
 
